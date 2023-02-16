@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&family=Poppins:wght@300&display=swap');
+
+:root{
+    --logocolor:#996313e0;
+}
+
+*{
+    font-family: 'Nunito', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: all .2s linear;
+}
+
+*::selection{
+    background: var(--logocolor);
+    color: white;
+}
+
+html{
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+}
+
+body{
+    background: #f7f7f7;
+}
+
+header{
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    background: white;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0, .1);
+    align-items: center;
+    justify-content: center;
+}
+
+header img{
+   width: 100px;
+   height: 100px;
+}
+
+header .navbar{
+    font-size: 14px;
+   
+}
+
+
+header .navbar a{
+    color: #666;
+    padding-left: 40px;
+
+}
+
+header .navbar a:hover{
+    color: var(--logocolor);
+}
+
+#menu-bar{
+    font-size: 20px;
+    cursor: pointer;
+    color: #666;
+    border: .2rem solid #666;
+    padding: 6px 12px;
+    border-radius: 5px;
+    display: none;
+}
+
+
+
+
+
+
+
+
+/*media queries*/
+@media(max-width:991px){
+    header .navbar{
+        font-size: 13px;
+    }
+}
+
+@media(max-width:768px){
+   #menu-bar{
+    display: initial;
+margin-right: 22px;
+   }
+
+   header {
+    justify-content: space-between;
+   }
+
+   .logo{
+    margin-left: 20px;
+   }
+
+   header .navbar{
+    position: absolute;
+    top:100%; left:0; right: 0;
+    background: #f7f7f7;
+    border-top: 3px solid rgba(0,0,0,0.1);
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+   }
+
+    header .navbar.active{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+    
+   header .navbar a{
+    margin: 1.5rem;
+    padding: 1.5rem;
+    display: block;
+    border: 1px solid rgba(0,0,0, .1);
+    border-left: 4px solid var(--logocolor);
+    background: #fff;   
+}
+}
+
+@media(max-width:400px){
+    header .navbar{
+        font-size: 12px;
+    }
+}
