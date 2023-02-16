@@ -31,6 +31,20 @@ body{
     background: #f7f7f7;
 }
 
+.btn{
+    display: inline-block;
+    padding: 10px;
+    color: var(--logocolor);
+    border: 1px solid var(--logocolor);
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 7px;
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+    margin-top: 15px;
+}
+
 header{
     position: fixed;
     top: 0; left: 0; right: 0;
@@ -75,6 +89,56 @@ header .navbar a:hover{
 }
 
 
+.hero-wrapper{
+    display: flex;
+}
+.hero{
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 100vh;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+}
+
+.hero .content{ 
+  position: absolute;
+  top: 30%;
+  left: 60%;
+  transform: translate(-50%, -50%);
+  animation: float 3s linear infinite;
+  margin-right: 190px;
+}
+
+@keyframes float{
+    0%, 100%{
+        transform: translateY(0px);
+    }
+    50%{
+        transform: translateY(7px);
+    } 
+}
+
+.hero .hero-image img{
+    width: 100%;
+}
+
+.hero .content h1{
+    font-weight: 300;
+font-size: 80px;
+}
+
+.hero .content p{
+    font-size: 20px;
+    text-transform: capitalize;
+    
+}
+
+
+
+
+
+
 
 
 
@@ -86,6 +150,22 @@ header .navbar a:hover{
     header .navbar{
         font-size: 13px;
     }
+
+    .hero .content{ 
+        position: absolute;
+        top: 20%;
+        left: 60%;
+        transform: translate(-50%, -50%);
+        animation: float 3s linear infinite;;
+        margin-right: 150px;
+    }
+    .hero .content h1{
+        font-size: 70px;
+    }
+    
+    .hero .content p{
+        font-size: 18px;
+        }
 }
 
 @media(max-width:768px){
@@ -122,10 +202,49 @@ margin-right: 22px;
     border-left: 4px solid var(--logocolor);
     background: #fff;   
 }
+
+.hero .content{ 
+    position: absolute;
+    top: 20%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+    animation: float 3s linear infinite;;
+    margin-right: 80px;
+}
+.hero .content h1{
+    font-size: 60px;
+}
+
+.hero .content p{
+    font-size: 16px;
+    }
+
 }
 
 @media(max-width:400px){
     header .navbar{
         font-size: 12px;
+    }
+
+    .hero .content h1{
+        font-size: 40px;
+    }
+    
+    .hero .content p{
+        font-size: 12px;
+        }
+    
+    .btn{
+        display: inline-block;
+        padding: 8px;
+        color: var(--logocolor);
+        border: 1px solid var(--logocolor);
+        cursor: pointer;
+        font-size: 14px;
+        border-radius: 7px;
+        position: relative;
+        overflow: hidden;
+        z-index: 0;
+        margin-top: 15px;
     }
 }
