@@ -243,6 +243,135 @@ header .navbar a:hover{
 
 
 
+.review .box-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-right: 40px;
+    margin-left: 40px;
+}
+
+.review .box-container .box{
+    text-align: center;
+    padding: 30px;
+    border: 1px solid #fff;
+    box-shadow: 0 10px 20px rgba(0,0,0, .1);
+    border-radius: 10px;
+    flex: 1 1 20px;
+    background: #414141;
+    margin-top: 10px;
+    color: #fff;
+}
+
+.review .box-container .box img{
+    height: 9rem;
+    width: 9rem;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.review .box-container .box h3{
+    font-size: 14px;
+    padding: 10px;
+}
+
+.review .box-container .box .stars{
+ font-size: 10px;
+ color: var(--logocolor);
+ padding: 10px;
+}
+
+.review .box-container .box p{
+    font-size: 13px;
+    color: #eee;
+    text-transform: capitalize;
+    padding: 10px;
+}
+
+
+
+.contact .box-container{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 80%;
+    margin-top: 60px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+   
+}
+
+.contact .box-container:after{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: url("/assets/images/extra.PNG") no-repeat center;
+    background-size: cover;
+    z-index: -1;
+    filter: blur(10px);
+}
+
+.contact .box-container .box{
+    max-width: 700px;
+    min-height: 400px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #fff;
+}
+
+.contact .box-container .box .left{
+    
+    height: 100%;
+    background: url("/assets/images/extra.PNG") no-repeat center;
+    background-size: cover;
+}
+
+.contact .box-container .box .right{
+    padding: 15px 20px;
+}
+
+.contact .box-container .box .right h2{
+    position: relative;
+    padding-bottom: 20px;
+}
+
+.contact .box-container .box .right .field{
+    width: 100%;
+ border: 1px solid rgba(0,0,0, .1);
+ text-transform: capitalize;
+ padding: 10px;
+ margin-bottom: 10px;
+ background-color: rgba(230, 230, 230, 0.6);
+ outline: none;
+ transition: .3s;
+}
+
+.contact .box-container .box .right .field:hover{
+background-color: #1d1d1d;
+}
+
+.contact .box-container .box .right .field:focus{
+    background-color: #fff;
+    border: 2px solid var(--logocolor)
+    }
+
+    .contact .box-container .box .right .contact .btn{
+        width: 100%;
+        padding: 5px;
+    }
+
+
+
+
+
 
 
 
@@ -333,6 +462,19 @@ header .navbar a:hover{
 .hero .content p{
     font-size: 16px;
     }
+
+    .contact .box-container .box{   
+        margin-top: 250px;   
+        grid-template-columns: 1fr;
+          
+    }
+
+    .contact .box-container .box .left{
+    
+        height: 350px;
+       
+    }
+
 }
 
 
